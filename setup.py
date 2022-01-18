@@ -1,14 +1,15 @@
 from os.path import join, exists, isdir, dirname, abspath
 from os import environ, listdir, mkdir
-from distutils.command.build_ext import build_ext
+
 import sys
 import ffpyplayer
 
-
 try:
     from setuptools import setup, Extension
+    from setuptools.command.build_ext import build_ext
     print('Using setuptools')
 except ImportError:
+    from distutils.command.build_ext import build_ext
     from distutils.core import setup
     from distutils.extension import Extension
     print('Using distutils')
