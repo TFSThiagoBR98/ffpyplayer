@@ -39,9 +39,9 @@ jobs:
         mkdir "$env:FF_BUILD_DIR"
         cd "$env:FF_BUILD_DIR"
 
-        Invoke-WebRequest "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n5.0-latest-win$env:BITTNESS-lgpl-shared-5.0.zip" -OutFile "shared.zip"
+        Invoke-WebRequest "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-n4.4-latest-win$env:BITTNESS-lgpl-shared-4.4.zip" -OutFile "shared.zip"
         7z x "shared.zip"
-        ren "ffmpeg-n5.0-latest-win$env:BITTNESS-lgpl-shared-5.0" ffmpeg
+        ren "ffmpeg-n4.4-latest-win$env:BITTNESS-lgpl-shared-4.4" ffmpeg
 
         Invoke-WebRequest "https://www.libsdl.org/release/SDL2-devel-$env:SDL_VERSION-VC.zip" -OutFile "SDL2-devel-$env:SDL_VERSION-VC.zip"
         7z x "SDL2-devel-$env:SDL_VERSION-VC.zip"
